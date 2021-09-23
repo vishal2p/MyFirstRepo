@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="eaddrs"   class="bean.Address">
+		<property name="Hno"  value="D.No.11-123-A" />
+		<property name="Loc"  value="Chennai" />
+	</bean>
+	 
+	<bean id="eacc"  class="bean.Account">
+		<property name="accName"  value="SBI Account" />
+		<property name="accType"  value="Savings" />		
+	</bean>
+<!-- 	
+	<bean id="eacc1"  class="bean.Account">
+		<property name="accName"  value="SBI Account" />
+		<property name="accType"  value="Savings" />		
+	</bean>
+ -->	
+	<bean id="emp"  class="Employee" autowire="byType">
+		<property name="empName"  value="Krishna Rao" />
+	</bean>
+
+</beans>
